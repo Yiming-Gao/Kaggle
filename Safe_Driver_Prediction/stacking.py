@@ -3,6 +3,7 @@ class Ensemble(object):
         self.n_folds = n_folds
         self.stacker = stacker
         self.base_models = base_models
+        
     def fit_predict(self, X, y, T):
         X = np.array(X)
         y = np.array(y)
