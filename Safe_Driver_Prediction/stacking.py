@@ -25,4 +25,4 @@ class Ensemble(object):
             S_test[:, i] = S_test_i.mean(1)
             
         self.stacker.fit(S_train, y)
-        y_pred = self.stacker.predict(S_test)[:]
+        y_pred = self.stacker.predict(S_test)[: ]
