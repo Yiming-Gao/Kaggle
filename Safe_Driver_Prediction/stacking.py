@@ -23,5 +23,6 @@ class Ensemble(object):
                 S_train[test_idx, i] = y_pred
                 S_test_i[:, j] = clf.predict(T)[:]
             S_test[:, i] = S_test_i.mean(1)
+            
         self.stacker.fit(S_train, y)
         y_pred = self.stacker.predict(S_test)[:]
